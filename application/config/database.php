@@ -70,19 +70,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | The $query_builder variables lets you determine whether or not to load
 | the query builder class.
 */
-$active_group = 'default';
+
+
+$active_group = 'default';  // change mo lang yung active group/ dtabase na gusto mo gamitin
 $query_builder = TRUE;
 
-$db['default'] = array(
+$db['default'] = array(   // pwede ka mag create ng madaming ganto and gumamit ng ibat ibang database
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => '',
+	'hostname' => 'localhost:3307',
+	'username' => 'root',
 	'password' => '',
-	'database' => '',
+	'database' => 'test',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
-	'db_debug' => (ENVIRONMENT !== 'production'),
+	'db_debug' => (ENVIRONMENT !== 'production'),  // production use to show errors in db and development is use to hide errors
 	'cache_on' => FALSE,
 	'cachedir' => '',
 	'char_set' => 'utf8',
